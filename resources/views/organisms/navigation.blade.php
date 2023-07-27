@@ -8,11 +8,12 @@
             <li><a href="{{ route('login') }}">Sign in</a></li>
         @endguest
         @auth
-            <!-- Show logout form for authenticated users -->
             <li>
-                <form action="{{ route('logout') }}" method="post">
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    Sign out
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="post" style="display: none;">
                     @csrf
-                    <button type="submit">Logout</button>
                 </form>
             </li>
         @endauth

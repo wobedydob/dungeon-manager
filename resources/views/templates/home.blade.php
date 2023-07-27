@@ -1,5 +1,8 @@
 @extends('base')
 
+<h1>Dungeon Manager</h1>
+<p>Compendium of Creation</p>
+
 @section('content')
     @guest
         <!-- Content for guests (non-authenticated users) -->
